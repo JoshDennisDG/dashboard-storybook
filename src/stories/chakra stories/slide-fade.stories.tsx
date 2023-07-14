@@ -1,13 +1,12 @@
-import { useBoolean } from "@chakra-ui/hooks"
-import * as React from "react"
-import { SlideFade, SlideFadeProps } from ".."
+import { useBoolean } from "@chakra-ui/hooks";
+import { SlideFade, SlideFadeProps } from "@chakra-ui/react";
 
 export default {
   title: "Components / Transition / Slide Fade",
-}
+};
 
 const Example = (props: SlideFadeProps) => {
-  const [open, { toggle }] = useBoolean(false)
+  const [open, { toggle }] = useBoolean(false);
   return (
     <>
       <button onClick={toggle}>Toggle Slide</button>
@@ -25,21 +24,21 @@ const Example = (props: SlideFadeProps) => {
         industry.
       </SlideFade>
     </>
-  )
-}
+  );
+};
 
-export const Basic = () => <Example />
+export const Basic = () => <Example />;
 
 export const WithCustomTransition = () => (
   <Example transition={{ enter: { duration: 0.3 }, exit: { duration: 0.5 } }} />
-)
+);
 
 export const WithTransitionEnd = () => (
   <Example
     style={{ display: "block" }}
     transitionEnd={{ exit: { display: "none" } }}
   />
-)
+);
 
 export const WithoutReverseProp = () => (
   <Example
@@ -47,4 +46,4 @@ export const WithoutReverseProp = () => (
     style={{ display: "block" }}
     transitionEnd={{ exit: { display: "none" } }}
   />
-)
+);

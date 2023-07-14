@@ -1,8 +1,6 @@
 import { useDisclosure } from "@chakra-ui/hooks";
 import { chakra } from "@chakra-ui/system";
 import * as React from "react";
-//@ts-ignore
-import Lorem from "react-lorem-component";
 import {
   Modal,
   ModalBody,
@@ -159,7 +157,28 @@ export const InsideScroll = () => {
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Lorem size={5} />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis. Sit nulla est ex deserunt exercitation
+            anim occaecat. Nostrud ullamco deserunt aute id consequat veniam
+            incididunt duis in sint irure nisi. Mollit officia cillum Lorem
+            ullamco minim nostrud elit officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>
@@ -181,7 +200,30 @@ export const AnimationDisabled = () => {
           <ModalHeader>Modal Title</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Lorem size={5} />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
+            <br />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>
@@ -203,7 +245,10 @@ export const FullWithLongContent = () => {
           <ModalHeader>Modal Title2</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Lorem count={30} />
+            Sit nulla est ex deserunt exercitation anim occaecat. Nostrud
+            ullamco deserunt aute id consequat veniam incididunt duis in sint
+            irure nisi. Mollit officia cillum Lorem ullamco minim nostrud elit
+            officia tempor esse quis.
           </ModalBody>
           <ModalFooter>
             <Button onClick={onClose}>Close</Button>

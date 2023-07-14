@@ -1,5 +1,4 @@
-import React from "react"
-import { Container, Divider } from ".."
+import { Container, Divider } from "@chakra-ui/react";
 
 export default {
   title: "Components / Data Display / Divider",
@@ -10,19 +9,19 @@ export default {
       </Container>
     ),
   ],
-}
+};
 
 /**
  * Divider will use the `horizontal` variant by default.
  *
  * @see `/theme/components/Divider.ts`
  */
-export const Basic = () => <Divider />
+export const Basic = () => <Divider />;
 
-export const Vertical = () => <Divider orientation="vertical" />
+export const Vertical = () => <Divider orientation="vertical" />;
 
-export const Horizontal = () => <Divider orientation="horizontal" />
+export const Horizontal = () => <Divider orientation="horizontal" />;
 
 export const DashedVariant = () => (
   <Divider orientation="horizontal" variant="dashed" />
-)
+);

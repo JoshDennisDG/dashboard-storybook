@@ -1,7 +1,5 @@
 import { chakra } from "@chakra-ui/system";
 import * as React from "react";
-//@ts-ignore
-import Lorem from "react-lorem-component";
 import { Button } from "@chakra-ui/button";
 import { Input } from "@chakra-ui/input";
 import { Stack } from "@chakra-ui/layout";
@@ -19,6 +17,7 @@ import {
   NumberInputField,
   NumberInputStepper,
   useNumberInput,
+  Text,
 } from "@chakra-ui/react";
 
 export default {
@@ -79,13 +78,13 @@ export const UseNumberInput = () => {
   return (
     <>
       <div>current: {valueAsNumber}</div>
-      <Lorem />
+      <Text>Lorem ipsum</Text>
       <chakra.div display="flex">
         <Button {...getIncrementButtonProps()}>+</Button>
         <Input {...(getInputProps() as any)} />
         <Button {...getDecrementButtonProps()}>-</Button>
       </chakra.div>
-      <Lorem />
+      <Text>Lorem ipsum</Text>
     </>
   );
 };

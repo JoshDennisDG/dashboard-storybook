@@ -1,13 +1,12 @@
-import { useBoolean } from "@chakra-ui/hooks"
-import * as React from "react"
-import { Slide } from "../src/slide"
+import { useBoolean } from "@chakra-ui/hooks";
+import { Slide } from "@chakra-ui/react";
 
 export default {
   title: "Components / Transition / Slide",
-}
+};
 
 const SlideExample = (props: any) => {
-  const [open, { toggle }] = useBoolean(false)
+  const [open, { toggle }] = useBoolean(false);
   return (
     <>
       <button onClick={toggle}>Toggle Slide</button>
@@ -31,7 +30,7 @@ const SlideExample = (props: any) => {
         of Lorem Ipsum.
       </Slide>
     </>
-  )
-}
+  );
+};
 
-export const Basic = () => <SlideExample />
+export const Basic = () => <SlideExample />;
