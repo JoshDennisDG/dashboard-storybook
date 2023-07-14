@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Avenir Book";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/eot/avenir-book.eot");
+  src: local("☺"), url("../assets/fonts/woff/avenir-book.woff") format("woff"),
+    url("../assets/fonts/ttf/avenir-book.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir Medium";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/eot/avenir-medium.eot");
+  src: local("☺"), url("../assets/fonts/woff/avenir-medium.woff") format("woff"),
+    url("../assets/fonts/ttf/avenir-medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir Light";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../assets/fonts/eot/avenir-light.eot");
+  src: local("☺"), url("../assets/fonts/woff/avenir-light.woff") format("woff"),
+    url("../assets/fonts/ttf/avenir-light.ttf") format("truetype"),
+    url("../assets/fonts/svg/avenir-light.svg") format("svg");
+}
