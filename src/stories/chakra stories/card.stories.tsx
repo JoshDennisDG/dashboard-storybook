@@ -1,74 +1,64 @@
-import { Avatar } from "@chakra-ui/avatar";
-import { Button, ButtonGroup, IconButton } from "@chakra-ui/button";
-import { Image } from "@chakra-ui/image";
 import {
+  Avatar,
   Box,
+  Button,
+  ButtonGroup,
+  Card,
+  CardBody,
+  CardFooter,
+  CardHeader,
   Divider,
-  Heading,
   HStack,
+  Heading,
+  IconButton,
+  Image,
   Stack,
   StackDivider,
   Text,
-} from "@chakra-ui/layout";
-import { chakra } from "@chakra-ui/system";
-import { BiChat, BiLike, BiShare } from "react-icons/bi";
+  ThemingProps,
+  theme,
+} from "@chakra-ui/react";
+import { loremIpsum } from "lorem-ipsum";
+import { StoryFn } from "@storybook/react";
+import { getThemingArgTypes } from "@chakra-ui/storybook-addon";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { Card, CardBody, CardFooter, CardHeader } from "@chakra-ui/react";
+import { BiChat, BiLike, BiShare } from "react-icons/bi";
+
+const DEFAULT_ARGS = {
+  size: "md",
+  variant: "elevated",
+};
+
+const ARG_TYPES = getThemingArgTypes(theme, "Card");
 
 export default {
   title: "Components / Data Display / Card",
   decorators: [
     (Story: any) => (
-      <chakra.div mx="auto" maxW="2xl" mt="40px">
+      <Box mx="auto" maxW="2xl" mt="40px">
         <Story />
-      </chakra.div>
+      </Box>
     ),
   ],
 };
 
-export const Variants = () => (
-  <Stack spacing="4">
-    {["elevated", "outline", "filled", "unstyled"].map((variant) => (
-      <Card key={variant} variant={variant}>
-        <CardHeader>
-          <Heading size="md"> {variant}</Heading>
-        </CardHeader>
-        <CardBody>
-          <Text>variant = {variant}</Text>
-        </CardBody>
-      </Card>
-    ))}
-  </Stack>
-);
-
-export const Sizes = () => (
-  <Stack spacing="4">
-    {["sm", "md", "lg"].map((size) => (
-      <Card key={size} size={size}>
-        <CardHeader>
-          <Heading size="md"> {size}</Heading>
-        </CardHeader>
-        <CardBody>
-          <Text>size = {size}</Text>
-        </CardBody>
-      </Card>
-    ))}
-  </Stack>
-);
-
-export const Basic = () => (
-  <Card>
+export const Basic: StoryFn<ThemingProps<"Card">> = (props) => (
+  <Card {...props}>
     <CardHeader>
-      <Heading size="md"> Customer dashboard</Heading>
+      <Heading size="md">This is my header</Heading>
     </CardHeader>
-    <CardBody>
-      <Text>View a summary of all your customers over the last month.</Text>
-    </CardBody>
+    <CardBody>{loremIpsum({ count: 2 })}</CardBody>
+    <CardFooter>
+      <Button>Button</Button>
+    </CardFooter>
   </Card>
 );
 
-export const WithDivider = () => (
-  <Card>
+Basic.argTypes = ARG_TYPES;
+Basic.args = DEFAULT_ARGS;
+
+export const WithDivider: StoryFn<ThemingProps<"Card">> = (props) => (
+  <Card {...props}>
     <CardHeader>
       <Heading size="md">Client Report</Heading>
     </CardHeader>
@@ -104,8 +94,11 @@ export const WithDivider = () => (
   </Card>
 );
 
-export const WithImage = () => (
-  <Card maxW="sm">
+WithDivider.argTypes = ARG_TYPES;
+WithDivider.args = DEFAULT_ARGS;
+
+export const WithImage: StoryFn<ThemingProps<"Card">> = (props) => (
+  <Card maxW="sm" {...props}>
     <CardBody>
       <Image
         src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
@@ -138,8 +131,11 @@ export const WithImage = () => (
   </Card>
 );
 
-export const HorizontalCard = () => (
-  <Card direction="row" overflow="hidden" variant="outline">
+WithImage.argTypes = ARG_TYPES;
+WithImage.args = DEFAULT_ARGS;
+
+export const HorizontalCard: StoryFn<ThemingProps<"Card">> = (props) => (
+  <Card direction="row" overflow="hidden" {...props}>
     <Image
       objectFit="cover"
       maxW="200px"
@@ -163,8 +159,11 @@ export const HorizontalCard = () => (
   </Card>
 );
 
-export const Advanced = () => (
-  <Card maxW="md">
+HorizontalCard.argTypes = ARG_TYPES;
+HorizontalCard.args = DEFAULT_ARGS;
+
+export const Advanced: StoryFn<ThemingProps<"Card">> = (props) => (
+  <Card maxW="md" {...props}>
     <CardHeader>
       <HStack spacing="4">
         <Avatar name="Segun Adebayo" src="https://bit.ly/sage-adebayo" />
@@ -207,3 +206,6 @@ export const Advanced = () => (
     </CardFooter>
   </Card>
 );
+
+Advanced.argTypes = ARG_TYPES;
+Advanced.args = DEFAULT_ARGS;
