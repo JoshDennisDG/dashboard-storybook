@@ -1,10 +1,6 @@
 import type { Preview } from "@storybook/react";
 import theme from "../src/theme";
 
-if (!localStorage.getItem("theme")) {
-  localStorage.setItem("theme", JSON.stringify(theme));
-}
-
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -15,7 +11,7 @@ const preview: Preview = {
       },
     },
     chakra: {
-      theme: JSON.parse(localStorage.getItem("theme") as any),
+      theme,
     },
   },
 };
