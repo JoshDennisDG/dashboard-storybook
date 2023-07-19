@@ -9,9 +9,8 @@ import {
   Box,
   Card,
   CardBody,
-  CardHeader,
-  Heading,
   Textarea,
+  Select as ChakraSelect,
 } from "@chakra-ui/react";
 import { StoryFn } from "@storybook/react";
 import Select from "../../components/Select";
@@ -96,9 +95,6 @@ TextAreaExample.args = {
 
 export const SelectExample: StoryFn<SelectStoryProps> = (props) => (
   <Card>
-    <CardHeader>
-      <Heading size="md">This is a native select</Heading>
-    </CardHeader>
     <CardBody>
       <FormControl id="first-name" {...props}>
         <FormLabel>First name</FormLabel>
@@ -128,6 +124,39 @@ SelectExample.argTypes = {
 
 SelectExample.args = {
   allowEmpty: false,
+  helperText: "Some helper text",
+  isInvalid: false,
+  isRequired: false,
+};
+
+export const NativeSelectExample: StoryFn<SelectStoryProps> = (props) => (
+  <Card>
+    <CardBody>
+      <FormControl id="first-name" {...props}>
+        <FormLabel>First name</FormLabel>
+        <ChakraSelect onChange={console.log}>
+          <option value="Option 1">Option 1</option>
+          <option value="Option 2">Option 2</option>
+        </ChakraSelect>
+        {props.helperText && (
+          <FormHelperText>{props.helperText}</FormHelperText>
+        )}
+        <FormErrorMessage>
+          <FormErrorIcon />
+          Your First name is invalid
+        </FormErrorMessage>
+      </FormControl>
+    </CardBody>
+  </Card>
+);
+
+NativeSelectExample.argTypes = {
+  helperText: { type: "string" },
+  isInvalid: { type: "boolean" },
+  isRequired: { type: "boolean" },
+};
+
+NativeSelectExample.args = {
   helperText: "Some helper text",
   isInvalid: false,
   isRequired: false,
