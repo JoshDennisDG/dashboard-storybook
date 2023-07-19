@@ -28,7 +28,7 @@ export default {
 };
 
 export const Basic: StoryFn<ThemingProps<"Tag">> = (props) => (
-  <Tag {...props}>Teal</Tag>
+  <Tag {...props}>My Tag</Tag>
 );
 
 Basic.argTypes = getThemingArgTypes(theme, "Tag");
@@ -45,7 +45,7 @@ export const WithIcon: StoryFn<WithIconStoryProps> = ({
 }) => (
   <Tag {...props}>
     {iconPosition === "left" && <TagLeftIcon w="12px" h="12px" as={AddIcon} />}
-    <TagLabel>Green</TagLabel>
+    <TagLabel>My Tag</TagLabel>
     {iconPosition === "right" && (
       <TagRightIcon w="12px" h="12px" as={AddIcon} />
     )}

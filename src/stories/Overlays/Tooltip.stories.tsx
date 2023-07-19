@@ -12,7 +12,7 @@ export default {
 };
 
 export const Basic: StoryFn<StoryProps> = (props) => (
-  <Tooltip label="This is a tooltip!" {...props}>
+  <Tooltip isOpen label="This is a tooltip!" {...props}>
     <Button>Hover</Button>
   </Tooltip>
 );

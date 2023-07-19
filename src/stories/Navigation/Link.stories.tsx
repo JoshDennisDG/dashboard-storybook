@@ -22,7 +22,7 @@ export const Basic = () => (
     <Card w="fit-content">
       <CardBody>
         <Text>
-          We can also have a <Link color="teal.400">link here</Link>
+          We can also have a <Link>link here</Link>
         </Text>
       </CardBody>
     </Card>
