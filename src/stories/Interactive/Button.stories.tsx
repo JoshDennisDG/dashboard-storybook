@@ -23,20 +23,17 @@ const ARG_TYPES = getThemingArgTypes(theme, "Button");
 const colorSchemes = get(ARG_TYPES, "colorScheme.type.value", []) as string[];
 
 const buttonArgTypes: ArgTypes<StoryProps> = {
-  children: { type: "string" },
   isDisabled: { type: "boolean" },
   isLoading: { type: "boolean" },
   ...omit(ARG_TYPES, "colorScheme"),
 };
 
 const defaultArgs: Partial<StoryProps> = {
-  children: "Button",
   isDisabled: false,
   isLoading: false,
 };
 
 interface StoryProps extends ThemingProps<"Button"> {
-  children?: React.ReactNode;
   isDisabled?: boolean;
   isLoading?: boolean;
 }
@@ -49,7 +46,9 @@ export const Basic: StoryFn<StoryProps> = (props) => (
         colorScheme={color}
         loadingText="Loading..."
         {...props}
-      />
+      >
+        {color}
+      </Button>
     ))}
   </>
 );
