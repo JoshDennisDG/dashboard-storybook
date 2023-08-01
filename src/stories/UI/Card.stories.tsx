@@ -52,10 +52,24 @@ Base.argTypes = ARG_TYPES;
 Base.args = DEFAULT_ARGS;
 
 export const HorizontalCard: StoryFn<ThemingProps<"Card">> = (props) => (
-  <Card direction="row" overflow="hidden" {...props}>
+  <Card
+    direction={{
+      base: "column",
+      sm: "row",
+    }}
+    overflow="hidden"
+    {...props}
+  >
     <Image
       objectFit="cover"
-      maxW="200px"
+      maxW={{
+        base: "100%",
+        sm: "200px",
+      }}
+      maxH={{
+        base: "200px",
+        sm: "100%",
+      }}
       src="https://images.unsplash.com/photo-1667489022797-ab608913feeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw5fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=800&q=60"
       alt="Caffe Latte"
     />
